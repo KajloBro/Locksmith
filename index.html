@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Locksmith</title>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Import Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Import master.css-->
+        <link type="text/css" rel="stylesheet" href="css/master.css"  media="screen,projection"/>
+
+        <!-- Import Slick css-->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class="custom_wrapper valign-wrapper teal lighten-5 ">
+            <div class="container">
+                <form action="#">
+                    <div class="my_slider">
+
+                        <!-- Slide 1 -->
+                        <div class="slide1">
+                            <div class="row center-align mb-5">
+                                <h2>I NEED A LOCKSMITH FOR MY</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col m12 offset-l3 l2 center-align">
+                                    <span>
+                                        <label>
+                                            <input class="with-gap" name="window1" type="radio" value="home" checked />
+                                            <span class="options">Home</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="col m12 l2 center-align">
+                                    <span>
+                                        <label>
+                                            <input class="with-gap" name="window1" type="radio" value="bussines" />
+                                            <span class="options">Bussines</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="col m12 l2 center-align">
+                                    <span>
+                                        <label>
+                                            <input class="with-gap" name="window1" type="radio" value="automotive" />
+                                            <span class="options">Automotive</span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-s8 s4">
+                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2a (Home/Bussines) -->
+                        <div class="slide2">
+                            <div class="row center-align mb-5">
+                                <h2>WHAT TYPE OF SERVICE IS NEEDED?</h2>
+                            </div>
+                            <div class="row mb-5">
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Home/BusinessLockout" />
+                                            <span> Home / Business Lockout</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="LockRepair/Replace/Instal" />
+                                            <span>Lock Repair / Replace / Instal</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="LockRekey" />
+                                            <span>Lock Rekey</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="CCTV" />
+                                            <span>CCTV</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Mailbox" />
+                                            <span>Mailbox</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Safe/Vault" />
+                                            <span>Safe / Vault</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="FileCabinet/Desk" />
+                                            <span>File Cabinet / Desk</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="CommercialExitDevice" />
+                                            <span>Commercial Exit Device</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="KeyDuplication" />
+                                            <span>Key Duplication</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                       
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="DoorViewer/Peephole" />
+                                            <span>Door Viewer / Peephole</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Other" id="other_home_bussines" />
+                                            <span>Other, Please explain</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                
+                                <div class="col s8">
+                                    <div id="textarea_div_home_bussines">
+                                        <div class="input-field">
+                                            <textarea id="textarea_explain_home_bussines" class="materialize-textarea"></textarea>
+                                            <label for="textarea_explain_home_bussines">Please explain ...</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <div class="col s4">
+                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Slide 2b (Automotive) -->
+                        <div class="slide2b">
+                            <div class="row center-align mb-5">
+                                <h2>WHAT TYPE OF SERVICE IS NEEDED?</h2>
+                            </div>
+                            <div class="row mb-5">
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Lockout" />
+                                            <span>Lockout</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="CarKey/replacement" />
+                                            <span>Car Key Replacement</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="IgnitionLockRepair/Replace" />
+                                            <span>Ignition Lock Repair / Replace</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="DoorLockRepair/Replace" />
+                                            <span>Door Lock Repair / Replace</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Remote" />
+                                            <span>Remote</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Key/RemoteProgramming" />
+                                            <span>Key / Remote Programming</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Motorcycle/ATV/BoatKeys" />
+                                            <span>Motorcycle / ATV / Boat Keys</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="BrokenKeyExtraction" />
+                                            <span>Broken Key Extraction</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" name="Other" id="other_automotive" />
+                                            <span>Other, Please explain</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                
+                                <div class="col s8">
+                                    <div id="textarea_div_automotive">
+                                        <div class="input-field">
+                                            <textarea id="textarea_explain_automotive" class="materialize-textarea"></textarea>
+                                            <label for="textarea_explain_automotive">Please explain ...</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <div class="col s4">
+                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                </div>
+
+                            </div>
+                        </div>
+                            
+
+                        <!-- Slide 2c (Automotive) -->
+                        <div class="slide2c">
+                            <div class="row center-align mb-5">
+                                <h2>WHAT ARE WE WORKING ON?</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="input-field col s12 center-align">
+                                    <textarea id="textarea_working_on" class="materialize-textarea"></textarea>
+                                    <label for="textarea_working_on">Please enter details ...</label>
+                                    <small id="textarea_working_on">For example: 2007 Toyota Camry White</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-s8 s4">
+                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- slider -->
+                </form>
+            </div> <!-- container -->
+        </div> <!-- wrapper -->
+        
+        
+        <!-- Import jQuery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <!-- Import Materialize JS -->
+        <script src="js/bin/materialize.js"></script>
+
+        <!-- Import Slick JS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script src="js/custom/my_slick.js"></script>
+    </body>
+</html>
