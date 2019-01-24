@@ -40,30 +40,46 @@
 @import "components/datepicker";
 @import "components/timepicker";
 
-.custom_wrapper {
-    height: 100vh !important;
-}
+
+// ______________CUSTOM CSS______________
+
+// ________________HELPERS________________
 
 .mb-5 {
     margin-bottom: 5em;
 }
 
-.mt-5 {
-    margin-top: 7em !important;
+.mb-4 {
+    margin-bottom: 4em;
 }
 
-.buttons_margin {
-    margin: 10px;
+.min_height {
+    min-height: 100px;
 }
 
-.options {
+
+// ________________WRAPPER________________
+
+.custom_wrapper {
+    height: 100vh !important;
+}
+
+
+// ________________ELEMENTS________________
+
+.custom_radios {
     font-size: 2em !important;
 }
 
-#textarea_div_home_bussines {
+#txtareaDivA {
     display: none;
 }
 
-#textarea_div_automotive {
+#txtareaDivB {
     display: none;
+}
+
+#btnSubmit {
+    padding: 0 40px !important;
+    color: #fff;
 }

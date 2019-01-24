@@ -316,6 +316,7 @@ textarea {
     padding: .8rem 0 .8rem 0; /* prevents text jump on Enter keypress */
     resize: none;
     min-height: $input-height;
+    max-height: 3em;
     box-sizing: border-box;
   }
 }

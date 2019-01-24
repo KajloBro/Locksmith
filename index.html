@@ -6,74 +6,72 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Import Materialize Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-        <!--Import master.css-->
+        <!--Import custom CSS-->
         <link type="text/css" rel="stylesheet" href="css/master.css"  media="screen,projection"/>
 
         <!-- Import Slick css-->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
-        <div class="custom_wrapper valign-wrapper teal lighten-5 ">
+        <div class="custom_wrapper valign-wrapper brown lighten-5 ">
             <div class="container">
-                <form action="#">
+                <form method="post" action="php/mail.php" id="myForm" onSubmit="return validate()">
                     <div class="my_slider">
 
-                        <!-- Slide 1 -->
-                        <div class="slide1">
+                        <!-- Slide 0 -->
+                        <div class="slide0">
                             <div class="row center-align mb-5">
                                 <h2>I NEED A LOCKSMITH FOR MY</h2>
                             </div>
-                            <div class="row mb-5">
-                                <div class="col m12 offset-l3 l2 center-align">
+                            <div class="row mb-5 center-align">
+                                <div class="col m12 offset-l3 l2">
                                     <span>
                                         <label>
-                                            <input class="with-gap" name="window1" type="radio" value="home" checked />
-                                            <span class="options">Home</span>
+                                            <input class="with-gap" name="locksmith_for" type="radio" value="home" />
+                                            <span class="custom_radios">Home</span>
                                         </label>
                                     </span>
                                 </div>
-                                <div class="col m12 l2 center-align">
+                                <div class="col m12 l2">
                                     <span>
                                         <label>
-                                            <input class="with-gap" name="window1" type="radio" value="bussines" />
-                                            <span class="options">Bussines</span>
+                                            <input class="with-gap" name="locksmith_for" type="radio" value="bussines" />
+                                            <span class="custom_radios">Bussines</span>
                                         </label>
                                     </span>
                                 </div>
-                                <div class="col m12 l2 center-align">
+                                <div class="col m12 l2">
                                     <span>
                                         <label>
-                                            <input class="with-gap" name="window1" type="radio" value="automotive" />
-                                            <span class="options">Automotive</span>
+                                            <input class="with-gap" name="locksmith_for" type="radio" value="automotive" />
+                                            <span class="custom_radios">Automotive</span>
                                         </label>
                                     </span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col offset-s8 s4">
-                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                <div class="col offset-s9 s3">
+                                    <a id="btnNext0" class=" waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 2a (Home/Bussines) -->
-                        <div class="slide2">
-                            <div class="row center-align mb-5">
+
+                        <!-- Slide 1 (Home/Bussines) -->
+                        <div class="slide1">
+                            <div class="row center-align mb-4">
                                 <h2>WHAT TYPE OF SERVICE IS NEEDED?</h2>
                             </div>
-                            <div class="row mb-5">
+                            <div class="row left-align mb-5">
 
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Home/BusinessLockout" />
+                                            <input type="checkbox" name="Home/BusinessLockout"/>
                                             <span> Home / Business Lockout</span>
                                         </label>
                                     </span>
@@ -163,7 +161,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Other" id="other_home_bussines" />
+                                            <input type="checkbox" name="Other" id="otherA" />
                                             <span>Other, Please explain</span>
                                         </label>
                                     </span>
@@ -172,32 +170,36 @@
 
                             </div>
 
-                            <div class="row">
+                            <div class="row min_height center-align">
                                 
-                                <div class="col s8">
-                                    <div id="textarea_div_home_bussines">
+                                <div class="col s3 left-align">
+                                    <a id="btnPrev1" class="waves-effect waves-light btn-small"><i class="material-icons left">navigate_before</i>Previous</a>
+                                </div>
+
+                                <div class="col s6">
+                                    <div id="txtareaDivA">
                                         <div class="input-field">
-                                            <textarea id="textarea_explain_home_bussines" class="materialize-textarea"></textarea>
-                                            <label for="textarea_explain_home_bussines">Please explain ...</label>
+                                            <textarea id="txtareaA" class="materialize-textarea"></textarea>
+                                            <label for="txtareaA">Please explain ...</label>
                                         </div>
                                     </div>
                                 </div>
                                 
                             
-                                <div class="col s4">
-                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                <div class="col s3">
+                                    <a id="btnNext1" class="waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>&nbsp&nbsp&nbspNext&nbsp&nbsp&nbsp</a>
                                 </div>
 
                             </div>
                         </div>
 
 
-                        <!-- Slide 2b (Automotive) -->
-                        <div class="slide2b">
+                        <!-- Slide 2 (Automotive) -->
+                        <div class="slide2">
                             <div class="row center-align mb-5">
                                 <h2>WHAT TYPE OF SERVICE IS NEEDED?</h2>
                             </div>
-                            <div class="row mb-5">
+                            <div class="row left-align mb-5">
 
                                 <div class="col s6 l4">
                                     <span>
@@ -274,7 +276,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Other" id="other_automotive" />
+                                            <input type="checkbox" name="Other" id="otherB" />
                                             <span>Other, Please explain</span>
                                         </label>
                                     </span>
@@ -283,28 +285,32 @@
 
                             </div>
 
-                            <div class="row">
+                            <div class="row min-height center-align">
                                 
-                                <div class="col s8">
-                                    <div id="textarea_div_automotive">
+                                <div class="col s3 left-align">
+                                    <a id="btnPrev2" class="waves-effect waves-light btn-small"><i class="material-icons left">navigate_before</i>Previous</a>
+                                </div>
+
+                                <div class="col s6">
+                                    <div id="txtareaDivB">
                                         <div class="input-field">
-                                            <textarea id="textarea_explain_automotive" class="materialize-textarea"></textarea>
-                                            <label for="textarea_explain_automotive">Please explain ...</label>
+                                            <textarea id="txtareaB" class="materialize-textarea"></textarea>
+                                            <label for="txtareaB">Please explain ...</label>
                                         </div>
                                     </div>
                                 </div>
                                 
                             
-                                <div class="col s4">
-                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                                <div class="col s3">
+                                    <a id="btnNext2" class=" waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>&nbsp&nbsp&nbspNext&nbsp&nbsp&nbsp</a>
                                 </div>
 
                             </div>
                         </div>
                             
 
-                        <!-- Slide 2c (Automotive) -->
-                        <div class="slide2c">
+                        <!-- Slide 3 (WhatAbout) -->
+                        <div class="slide3">
                             <div class="row center-align mb-5">
                                 <h2>WHAT ARE WE WORKING ON?</h2>
                             </div>
@@ -315,12 +321,80 @@
                                     <small id="textarea_working_on">For example: 2007 Toyota Camry White</small>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col offset-s8 s4">
-                                    <a id="check_radio" class="buttons_margin waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>Next</a>
+                            
+                            
+                            <div class="row min-height center-align">
+                                
+                                <div class="col s3 left-align">
+                                    <a id="btnPrev3" class="waves-effect waves-light btn-small"><i class="material-icons left">navigate_before</i>Previous</a>
                                 </div>
+                               <div class="col offset-s6 s3">
+                                    <a id="btnNext3" class=" waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>&nbsp&nbsp&nbspNext&nbsp&nbsp&nbsp</a>
+                                </div>
+
                             </div>
                         </div>
+
+
+                        <!-- Slide 4 (Address) -->
+                        <div class="slide4">
+                            <div class="row center-align mb-5">
+                                <h2>WHERE SERVICE IS NEEDED?</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="input-field col s12 center-align">
+                                    <input type="text" id="textarea_address"/>
+                                </div>
+                                <div id="map" style="height:100%;"></div>
+                            </div>
+                            
+                            <div class="row min-height center-align">
+                                
+                                <div class="col s3 left-align">
+                                    <a id="btnPrev4" class="waves-effect waves-light btn-small"><i class="material-icons left">navigate_before</i>Previous</a>
+                                </div>
+                               <div class="col offset-s6 s3">
+                                    <a id="btnNext4" class=" waves-effect waves-light btn-small"><i class="material-icons right">navigate_next</i>&nbsp&nbsp&nbspNext&nbsp&nbsp&nbsp</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Slide 5 () -->
+                        <div class="slide5">
+                                <div class="row center-align mb-5">
+                                    <h2>ALMOST DONE</h2>
+                                </div>
+                                <div class="row mb-5">
+                                        <div class="input-field col m4 s12">
+                                            <i class="material-icons prefix">account_circle</i>
+                                                <input id="name" type="text" class="validate">
+                                            <label for="name">Name*</label>
+                                        </div>
+                                        <div class="input-field col m4 s12">
+                                            <i class="material-icons prefix">phone</i>
+                                                <input id="telephone" type="tel" class="validate">
+                                            <label for="telephone">Telephone*</label>
+                                        </div>
+                                        <div class="input-field col m4 s12">
+                                            <i class="material-icons prefix">email</i>
+                                                <input id="email" type="tel" class="validate">
+                                            <label for="email">E-mail</label>
+                                        </div>
+                                </div>
+                                
+                                <div class="row min-height center-align">
+                                    
+                                    <div class="col s3 left-align">
+                                        <a id="btnPrev5" class="waves-effect waves-light btn-small"><i class="material-icons left">navigate_before</i>Previous</a>
+                                    </div>
+                                   <div class="col offset-s6 s3">
+                                       <input type="submit" value="Submit" id="btnSubmit" class="waves-effect waves-light btn-small" name="final">
+                                    </div>
+    
+                                </div>
+                            </div>
 
                     </div> <!-- slider -->
                 </form>
@@ -329,15 +403,21 @@
         
         
         <!-- Import jQuery -->
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
         <!-- Import Materialize JS -->
-        <script src="js/bin/materialize.js"></script>
+        <script src="assets/js/bin/materialize.js"></script>
+
+        <!-- Import Google Maps API Key -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlQKNWPRGayhjugyJhyMqCVKTI9MRg4uk&libraries=places&callback=initAutocomplete" async defer></script>
 
         <!-- Import Slick JS -->
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-        <script src="js/custom/my_slick.js"></script>
+        <!-- Import custom script -->
+        <script src="js/script.js"></script>
+
+        
     </body>
 </html>
