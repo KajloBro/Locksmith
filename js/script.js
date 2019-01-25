@@ -21,6 +21,8 @@ $(document).ready(function(){
             purpose = 1;
         else if (locksmithFor == 'automotive')
             purpose = 2;
+        else
+            M.toast({html: 'Check one button!', displayLength: '1000', classes: 'rounded'});   
         $('.my_slider').slick('slickGoTo', parseInt(purpose), false);
     });
 
@@ -33,11 +35,17 @@ $(document).ready(function(){
 
     $('#btnNext1').click(function() {
         // Check if textarea is empty
-        if($('#otherA').is(":checked") && !$.trim($("#txtareaA").val()))
-            alert("textarea is empty")
+        if($('#otherA').is(":checked") && !$.trim($("#txtareaA").val())) {
+            $('#txtareaA').addClass('txtarea_error');
+            $('#txtareaALabel').addClass('txtarea_label_error');
+            $('#txtareaA').focus(function() {
+                $('#txtareaA').removeClass('txtarea_error'),
+                $('#txtareaALabel').removeClass('txtarea_label_error');
+            });
+        }
         // Check if at least one checkbox is checked
         else if($('#myForm input[type=checkbox]:checked').length == 0)
-            alert("one checkbox")
+            M.toast({html: 'Check at least one checkbox!', displayLength: '1000', classes: 'rounded'}); 
         // Proceed
         else 
             $('.my_slider').slick('slickGoTo', 4, false);    
@@ -61,11 +69,17 @@ $(document).ready(function(){
 
     $('#btnNext2').click(function() {
         // Check if textarea is empty
-        if($('#otherB').is(":checked") && !$.trim($("#txtareaB").val()))
-            alert("textarea is empty");
+        if($('#otherB').is(":checked") && !$.trim($("#txtareaB").val())) {
+            $('#txtareaB').addClass('txtarea_error');
+            $('#txtareaBLabel').addClass('txtarea_label_error');
+            $('#txtareaB').focus(function() {
+                $('#txtareaB').removeClass('txtarea_error'),
+                $('#txtareaBLabel').removeClass('txtarea_label_error');
+            });
+        }
         // Check if at least one checkbox is checked
         else if($('#myForm input[type=checkbox]:checked').length == 0)
-            alert("one checkbox");
+            M.toast({html: 'Check at least one checkbox!', displayLength: '1000', classes: 'rounded'});
         // Proceed
         else 
             $('.my_slider').slick('slickGoTo', 3, false);    
@@ -89,8 +103,15 @@ $(document).ready(function(){
 
     $('#btnNext3').click(function() {
         // Check if textarea is empty
-        if(!$.trim($("#textarea_working_on").val()))
-            alert("textarea is empty");
+        if(!$.trim($("#textarea_working_on").val())) {
+            $('#textarea_working_on').addClass('txtarea_error');
+            $('#textarea_working_on_label').addClass('txtarea_label_error');
+            $('#textarea_working_on').focus(function() {
+                $('#textarea_working_on').removeClass('txtarea_error'),
+                $('#textarea_working_on_label').removeClass('txtarea_label_error');
+            });
+        }
+            
         // Proceed
         else 
             $('.my_slider').slick('slickGoTo', 4, false);    
@@ -108,8 +129,12 @@ $(document).ready(function(){
 
     $('#btnNext4').click(function() {
         // Check if textarea is empty
-        if(!$.trim($("#textarea_address").val()))
-            alert("textarea is empty");
+        if(!$.trim($("#textarea_address").val())) {
+            $("#textarea_address").addClass('address_error');
+            $('#textarea_address').focus(function() {
+                $('#textarea_address').removeClass('address_error');
+            });
+        }
         // Proceed
         else 
             $('.my_slider').slick('slickGoTo', 5, false);    
@@ -150,16 +175,28 @@ function fillInAddress() {
 
 // Validation
 function validate() {
+    flag = true;
+    // Check if user input a name
     if(!$.trim($("#name").val())) {
-        alert("name field is empty");
-        return false;
+        $("#name").addClass('txtarea_error');
+        $("#name_label").addClass('txtarea_label_error');
+        flag = false;
+        $("#name").focus(function() {
+            $('#name').removeClass('txtarea_error');
+            $('#name_label').removeClass('txtarea_label_error');
+        });
     }
-    else if(!$.trim($("#telephone").val())) {
-        alert("telephone field is empty");
-        return false;
+    // Check if user input a telephone
+    if(!$.trim($("#telephone").val())) {
+        $("#telephone").addClass('txtarea_error');
+        $("#telephone_label").addClass('txtarea_label_error');
+        flag = false;
+        $("#telephone").focus(function() {
+            $('#telephone').removeClass('txtarea_error');
+            $('#telephone_label').removeClass('txtarea_label_error');
+        });
     }
-    else 
-        return true;
+    return flag;
 
 
 }

@@ -79,7 +79,24 @@
     display: none;
 }
 
-#btnSubmit {
-    padding: 0 40px !important;
-    color: #fff;
+.txtarea_error {
+    color: #d33 !important;
+    border-bottom: 1px solid #d33 !important;
+    box-shadow: 0 1px 0 0 #d33 !important
 }
+
+.txtarea_label_error {
+    color: #d33 !important;
+}
+
+.address_error {
+    border-bottom: 1px solid #d33 !important;
+    box-shadow: 0 1px 0 0 #d33 !important
+}
+
+#toast-container {
+    bottom: auto !important;
+    right: auto !important;
+    left: 0% !important;
+    top: 0% !important;
+  }
