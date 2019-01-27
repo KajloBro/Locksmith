@@ -8100,12 +8100,8 @@ input[type=range]::-ms-thumb {
   margin-bottom: 4em;
 }
 
-.min_height {
-  min-height: 100px;
-}
-
 .custom_wrapper {
-  height: 100vh !important;
+  height: 80vh !important;
 }
 
 .custom_radios {
@@ -8118,6 +8114,20 @@ input[type=range]::-ms-thumb {
 
 #txtareaDivB {
   display: none;
+}
+
+#toast-container {
+  bottom: 2% !important;
+  left: 2% !important;
+  top: auto !important;
+  right: auto !important;
+}
+
+@media only screen and (max-width : 600px) {
+  .toast {
+    width: auto !important;
+    max-width: 50% !important;
+  }
 }
 
 .txtarea_error {
@@ -8133,13 +8143,6 @@ input[type=range]::-ms-thumb {
 .address_error {
   border-bottom: 1px solid #d33 !important;
   box-shadow: 0 1px 0 0 #d33 !important;
-}
-
-#toast-container {
-  bottom: auto !important;
-  right: auto !important;
-  left: 0% !important;
-  top: 0% !important;
 }
 
 /*# sourceMappingURL=master.css.map */

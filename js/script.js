@@ -11,26 +11,39 @@ $(document).ready(function(){
         infinite: false,
         touchMove: false,
     });
-    
+
+
+
+    // onChange radio button hide unnecessary slides
+    $('input[type=radio][name=locksmith_for]').change(function() {
+        if (this.value == 'home' || this.value == 'bussines') {
+            $('.slide1').show();
+            $('.slide2').hide();
+            $('.slide3').hide();
+        }
+        else if (this.value == 'automotive') {
+            $('.slide2').show();
+            $('.slide3').show();
+            $('.slide1').hide();
+        }
+        main_option = this.value;
+    });
+
 
 
     // Slide 0 navigation
     $('#btnNext0').click(function() {
-        locksmithFor = $('input[name=locksmith_for]:checked').val();
-        if (locksmithFor == 'home' || locksmithFor == 'bussines')
-            purpose = 1;
-        else if (locksmithFor == 'automotive')
-            purpose = 2;
-        else
-            M.toast({html: 'Check one button!', displayLength: '1000', classes: 'rounded'});   
-        $('.my_slider').slick('slickGoTo', parseInt(purpose), false);
+        if (!$('input[name=locksmith_for]:checked').val()) 
+            M.toast({html: 'Choose an option', displayLength: '1000', classes: 'rounded'});  
+        else 
+            $('.my_slider').slick('slickNext');
     });
 
 
 
     // Slide 1 navigation
     $('#btnPrev1').click(function() {
-        $('.my_slider').slick('slickGoTo', 0, false);
+        $('.my_slider').slick('slickPrev');
     });
 
     $('#btnNext1').click(function() {
@@ -45,10 +58,10 @@ $(document).ready(function(){
         }
         // Check if at least one checkbox is checked
         else if($('#myForm input[type=checkbox]:checked').length == 0)
-            M.toast({html: 'Check at least one checkbox!', displayLength: '1000', classes: 'rounded'}); 
+            M.toast({html: 'Choose at least one option', displayLength: '1000', classes: 'rounded'}); 
         // Proceed
         else 
-            $('.my_slider').slick('slickGoTo', 4, false);    
+            $('.my_slider').slick('slickNext');    
     });
 
     $('#otherA').change(function(){
@@ -64,7 +77,7 @@ $(document).ready(function(){
 
     // Slide 2 navigation
     $('#btnPrev2').click(function() {
-        $('.my_slider').slick('slickGoTo', 0, false);
+        $('.my_slider').slick('slickPrev');
     });
 
     $('#btnNext2').click(function() {
@@ -79,10 +92,10 @@ $(document).ready(function(){
         }
         // Check if at least one checkbox is checked
         else if($('#myForm input[type=checkbox]:checked').length == 0)
-            M.toast({html: 'Check at least one checkbox!', displayLength: '1000', classes: 'rounded'});
+            M.toast({html: 'Choose at least one option', displayLength: '1000', classes: 'rounded'});
         // Proceed
         else 
-            $('.my_slider').slick('slickGoTo', 3, false);    
+            $('.my_slider').slick('slickNext');    
     });
 
     $('#otherB').change(function(){
@@ -98,7 +111,7 @@ $(document).ready(function(){
 
     // Slide 3 navigation
     $('#btnPrev3').click(function() {
-        $('.my_slider').slick('slickGoTo', 2, false);
+        $('.my_slider').slick('slickPrev');
     });
 
     $('#btnNext3').click(function() {
@@ -111,20 +124,16 @@ $(document).ready(function(){
                 $('#textarea_working_on_label').removeClass('txtarea_label_error');
             });
         }
-            
         // Proceed
         else 
-            $('.my_slider').slick('slickGoTo', 4, false);    
+            $('.my_slider').slick('slickNext');    
     });
 
 
 
     // Slide 4 navigation
     $('#btnPrev4').click(function() {
-        if (purpose == 1) 
-            $('.my_slider').slick('slickGoTo', 1, false);
-        else if (purpose == 2) 
-            $('.my_slider').slick('slickGoTo', 3, false);
+        $('.my_slider').slick('slickPrev');
     });
 
     $('#btnNext4').click(function() {
@@ -137,18 +146,23 @@ $(document).ready(function(){
         }
         // Proceed
         else 
-            $('.my_slider').slick('slickGoTo', 5, false);    
+            $('.my_slider').slick('slickNext');    
     });
 
 
 
     // Slide 5 navigation
     $('#btnPrev5').click(function() {
-        $('.my_slider').slick('slickGoTo', 4, false);
+        $('.my_slider').slick('slickPrev');
     });
 
+    $('#btnSerialize').click(function() {
+        var str = $( "form" ).serialize();
+        console.log(str);
+    });
     
 });
+
 
 
 
@@ -197,6 +211,6 @@ function validate() {
         });
     }
     return flag;
-
-
+    
 }
+
