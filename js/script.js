@@ -26,7 +26,6 @@ $(document).ready(function(){
             $('.slide3').show();
             $('.slide1').hide();
         }
-        main_option = this.value;
     });
 
 
@@ -156,10 +155,110 @@ $(document).ready(function(){
         $('.my_slider').slick('slickPrev');
     });
 
-    $('#btnSerialize').click(function() {
-        var str = $( "form" ).serialize();
-        console.log(str);
-    });
+    // Check serialize in console
+    // $('#btnSerialize').click(function() {
+    //     console.log($('#myForm').serialize());
+    // });
+
+    
+    // Validation
+    $('#btnSubmit').click(function() {
+        flag = true;
+
+    // Check if user input a name
+    if(!$.trim($("#name").val())) {
+        $("#name").addClass('txtarea_error');
+        $("#name_label").addClass('txtarea_label_error');
+        flag = false;
+        $("#name").focus(function() {
+            $('#name').removeClass('txtarea_error');
+            $('#name_label').removeClass('txtarea_label_error');
+        });
+    }
+
+    // Check if user input a telephone
+    if(!$.trim($("#telephone").val())) {
+        $("#telephone").addClass('txtarea_error');
+        $("#telephone_label").addClass('txtarea_label_error');
+        flag = false;
+        $("#telephone").focus(function() {
+            $('#telephone').removeClass('txtarea_error');
+            $('#telephone_label').removeClass('txtarea_label_error');
+        });
+    }
+
+
+    // Check if reCAPTCHA is checked
+    if(grecaptcha.getResponse().length === 0) {
+        M.toast({html: 'Please solve reCAPTCHA', displayLength: '1000', classes: 'rounded'});
+        flag = false;
+    } 
+
+
+    // Ajax
+    if (flag == true) {
+        
+        $('#btnSubmit').addClass('disabled');
+        $('#btnPrev5').addClass('disabled');
+        $('#buffer').addClass('indeterminate');
+        $('#buffer').removeClass('determinate');
+        $('body').addClass('cyan');
+        $('body').removeClass('brown');
+        $('h2').addClass('blue-text text-lighten-4');
+        $("#telephone").addClass('txtarea_loading');
+        $("#telephone_label").addClass('txtarea_label_loading');
+        $("#email").addClass('txtarea_loading');
+        $("#email_label").addClass('txtarea_label_loading');
+        $("#name").addClass('txtarea_loading');
+        $("#name_label").addClass('txtarea_label_loading');
+        $('i').addClass('icon_loading');
+        
+        $.ajax({
+            type: 'post',
+            url: 'php/mail.php',
+            data: $('#myForm').serialize(),
+            
+            success: function (data) {
+                if(data == 'success')
+                    alert("Your e-mail has been sent"); // ToDo: redirect somewhere nice
+                else
+                    M.toast({html: "For some reason, data was not fetched!", displayLength: '3000', classes: 'rounded'});
+            },
+            
+            error: function(x,e) {
+                if (x.status==0)
+                M.toast({html: "Oops, Please check your network.", displayLength: '3000', classes: 'rounded'});
+                else if(x.status==404)
+                   M.toast({html: "404: Requested URL not found.", displayLength: '3000', classes: 'rounded'});
+                else if(x.status==500)
+                   M.toast({html: "500: Internal Server Error. Please try again later", displayLength: '3000', classes: 'rounded'});
+                else if(e=='parsererror')
+                   M.toast({html: "Error.\nParsing JSON Request failed.", displayLength: '3000', classes: 'rounded'});
+                else if(e=='timeout')
+                    M.toast({html: "Request timed out.", displayLength: '3000', classes: 'rounded'});
+                else
+                    M.toast({html: "Unknow Error.\n" + x.responseText, displayLength: '3000', classes: 'rounded'});
+            },
+            
+            complete: function() {
+                $('#btnSubmit').removeClass('disabled');
+                $('#btnPrev5').removeClass('disabled');
+                $('#buffer').removeClass('indeterminate');
+                $('#buffer').addClass('determinate');
+                $('body').removeClass('cyan');
+                $('body').addClass('brown');
+                $('h2').removeClass('blue-text text-lighten-4');
+                $("#telephone").removeClass('txtarea_loading');
+                $("#telephone_label").removeClass('txtarea_label_loading');
+                $("#email").removeClass('txtarea_loading');
+                $("#email_label").removeClass('txtarea_label_loading');
+                $("#name").removeClass('txtarea_loading');
+                $("#name_label").removeClass('txtarea_label_loading');
+                $('i').removeClass('icon_loading');
+            }
+        });
+    }
+});
     
 });
 
@@ -184,33 +283,3 @@ function initAutocomplete() {
 function fillInAddress() {
     var place = autocomplete.getPlace();
 }
-
-
-
-// Validation
-function validate() {
-    flag = true;
-    // Check if user input a name
-    if(!$.trim($("#name").val())) {
-        $("#name").addClass('txtarea_error');
-        $("#name_label").addClass('txtarea_label_error');
-        flag = false;
-        $("#name").focus(function() {
-            $('#name').removeClass('txtarea_error');
-            $('#name_label').removeClass('txtarea_label_error');
-        });
-    }
-    // Check if user input a telephone
-    if(!$.trim($("#telephone").val())) {
-        $("#telephone").addClass('txtarea_error');
-        $("#telephone_label").addClass('txtarea_label_error');
-        flag = false;
-        $("#telephone").focus(function() {
-            $('#telephone').removeClass('txtarea_error');
-            $('#telephone_label').removeClass('txtarea_label_error');
-        });
-    }
-    return flag;
-    
-}
-

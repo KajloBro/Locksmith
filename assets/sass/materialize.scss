@@ -43,7 +43,10 @@
 
 // ______________CUSTOM CSS______________
 
+
+
 // ________________HELPERS________________
+
 
 .mb-5 {
     margin-bottom: 5em;
@@ -53,14 +56,23 @@
     margin-bottom: 4em;
 }
 
+.hide_me {
+    display: none;
+}
+
+
+
 // ________________WRAPPER________________
+
 
 .custom_wrapper {
     height: 80vh !important;
 }
 
 
+
 // ________________ELEMENTS________________
+
 
 .custom_radios {
     font-size: 2em !important;
@@ -89,6 +101,7 @@
 }
 
 
+
 // _________________ERRORS_________________
 
 
@@ -105,4 +118,23 @@
 .address_error {
     border-bottom: 1px solid #d33 !important;
     box-shadow: 0 1px 0 0 #d33 !important
+}
+
+
+
+// _________________LOADING________________
+
+
+.txtarea_loading {
+    color: #b2ebf2     !important;
+    border-bottom: 1px solid #b2ebf2     !important;
+    box-shadow: 0 1px 0 0 #b2ebf2     !important
+}
+
+.txtarea_label_loading {
+    color: #b2ebf2     !important;
+}
+
+.icon_loading {
+    color: #b2ebf2   ;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <title>Locksmith</title>
 
         <!--Import Google Icon Font-->
@@ -14,15 +15,19 @@
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     </head>
 
     <body class="brown lighten-5">
         
-        <form method="post" action="php/mail.php" id="myForm" onSubmit="return validate()" >
+        <form id="myForm">
             <div class="my_slider">
 
                 <!-- Slide 0 -->
                 <div class="slide0" id="slide0">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 5%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
                             <div class="row center-align mb-5">
@@ -71,9 +76,12 @@
 
                 <!-- Slide 1 (Home/Bussines) -->
                 <div class="slide1" id="slide1">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 30%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
-                            <div class="row center-align mb-4">
+                            <div class="row center-align mb-5">
                                 <h2>WHAT TYPE OF SERVICE IS NEEDED?</h2>
                             </div>
                             <div class="row left-align mb-5">
@@ -81,7 +89,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Home/BusinessLockout"/>
+                                            <input type="checkbox" value="Home/BusinessLockout" name="services[]" />
                                             <span> Home / Business Lockout</span>
                                         </label>
                                     </span>
@@ -90,7 +98,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="LockRepair/Replace/Instal" />
+                                            <input type="checkbox" value="LockRepair/Replace/Instal" name="services[]"/>
                                             <span>Lock Repair / Replace / Instal</span>
                                         </label>
                                     </span>
@@ -99,7 +107,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="LockRekey" />
+                                            <input type="checkbox" value="LockRekey" name="services[]"/>
                                             <span>Lock Rekey</span>
                                         </label>
                                     </span>
@@ -108,7 +116,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="CCTV" />
+                                            <input type="checkbox" value="CCTV" name="services[]"/>
                                             <span>CCTV</span>
                                         </label>
                                     </span>
@@ -117,7 +125,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Mailbox" />
+                                            <input type="checkbox" value="Mailbox" name="services[]"/>
                                             <span>Mailbox</span>
                                         </label>
                                     </span>
@@ -126,7 +134,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Safe/Vault" />
+                                            <input type="checkbox" value="Safe/Vault" name="services[]"/>
                                             <span>Safe / Vault</span>
                                         </label>
                                     </span>
@@ -135,7 +143,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="FileCabinet/Desk" />
+                                            <input type="checkbox" value="FileCabinet/Desk" name="services[]"/>
                                             <span>File Cabinet / Desk</span>
                                         </label>
                                     </span>
@@ -144,7 +152,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="CommercialExitDevice" />
+                                            <input type="checkbox" value="CommercialExitDevice" name="services[]"/>
                                             <span>Commercial Exit Device</span>
                                         </label>
                                     </span>
@@ -153,7 +161,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="KeyDuplication" />
+                                            <input type="checkbox" value="KeyDuplication" name="services[]"/>
                                             <span>Key Duplication</span>
                                         </label>
                                     </span>
@@ -162,7 +170,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="DoorViewer/Peephole" />
+                                            <input type="checkbox" value="DoorViewer/Peephole" name="services[]"/>
                                             <span>Door Viewer / Peephole</span>
                                         </label>
                                     </span>
@@ -171,7 +179,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Other" id="otherA" />
+                                            <input type="checkbox" value="Other" id="otherA" name="services[]"/>
                                             <span>Other, Please explain</span>
                                         </label>
                                     </span>
@@ -182,7 +190,7 @@
                             <div class="col s12">
                                 <div id="txtareaDivA">
                                     <div class="input-field">
-                                        <textarea id="txtareaA" class="materialize-textarea" name="other"></textarea>
+                                        <textarea id="txtareaA" class="materialize-textarea" name="other1"></textarea>
                                         <label id="txtareaBLabel" for="txtareaA">Please explain ...</label>
                                     </div>
                                 </div>     
@@ -206,6 +214,9 @@
 
                 <!-- Slide 2 (Automotive) -->
                 <div class="slide2" id="slide2">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 25%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
                             <div class="row center-align mb-5">
@@ -216,7 +227,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Lockout" />
+                                            <input type="checkbox" value="Lockout" name="services[]"/>
                                             <span>Lockout</span>
                                         </label>
                                     </span>
@@ -225,7 +236,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="CarKey/replacement" />
+                                            <input type="checkbox" value="CarKey/replacement" name="services[]"/>
                                             <span>Car Key Replacement</span>
                                         </label>
                                     </span>
@@ -234,7 +245,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="IgnitionLockRepair/Replace" />
+                                            <input type="checkbox" value="IgnitionLockRepair/Replace" name="services[]"/>
                                             <span>Ignition Lock Repair / Replace</span>
                                         </label>
                                     </span>
@@ -243,7 +254,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="DoorLockRepair/Replace" />
+                                            <input type="checkbox" value="DoorLockRepair/Replace" name="services[]"/>
                                             <span>Door Lock Repair / Replace</span>
                                         </label>
                                     </span>
@@ -252,7 +263,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Remote" />
+                                            <input type="checkbox" value="Remote" name="services[]"/>
                                             <span>Remote</span>
                                         </label>
                                     </span>
@@ -261,7 +272,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Key/RemoteProgramming" />
+                                            <input type="checkbox" value="Key/RemoteProgramming" name="services[]"/>
                                             <span>Key / Remote Programming</span>
                                         </label>
                                     </span>
@@ -270,7 +281,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Motorcycle/ATV/BoatKeys" />
+                                            <input type="checkbox" value="Motorcycle/ATV/BoatKeys" name="services[]"/>
                                             <span>Motorcycle / ATV / Boat Keys</span>
                                         </label>
                                     </span>
@@ -279,7 +290,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="BrokenKeyExtraction" />
+                                            <input type="checkbox" value="BrokenKeyExtraction" name="services[]"/>
                                             <span>Broken Key Extraction</span>
                                         </label>
                                     </span>
@@ -288,7 +299,7 @@
                                 <div class="col s6 l4">
                                     <span>
                                         <label>
-                                            <input type="checkbox" name="Other" id="otherB" />
+                                            <input type="checkbox" value="Other" id="otherB" name="services[]"/>
                                             <span>Other, Please explain</span>
                                         </label>
                                     </span>
@@ -298,7 +309,7 @@
                             <div class="col s12">
                                 <div id="txtareaDivB">
                                     <div class="input-field">
-                                        <textarea id="txtareaB" class="materialize-textarea" name="other"></textarea>
+                                        <textarea id="txtareaB" class="materialize-textarea" name="other2"></textarea>
                                         <label id="txtareaBLabel" for="txtareaB">Please explain ...</label>
                                     </div>
                                 </div>     
@@ -322,6 +333,9 @@
 
                 <!-- Slide 3 (WhatAbout) -->
                 <div class="slide3" id="slide3">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 40%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
                             <div class="row center-align mb-5">
@@ -353,6 +367,9 @@
 
                 <!-- Slide 4 (Address) -->
                 <div class="slide4" id="slide4">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 55%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
                             <div class="row center-align mb-5">
@@ -383,6 +400,9 @@
 
                 <!-- Slide 5 (Final) -->
                 <div class="slide5" id="slide5">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div id="buffer" class="determinate" style="width: 85%"></div>
+                    </div>
                     <div class="container">
                         <div class="custom_wrapper">
                             <div class="row center-align mb-5">
@@ -405,6 +425,11 @@
                                     <label id="email_label" for="email">E-mail</label>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col offset-m4 m4 s12">
+                                    <div class="g-recaptcha" data-sitekey="6LcpzYwUAAAAABf8gU0pg1TWDkXODCXw6tZ4exSm"></div>
+                                </div>
+                            </div>
 
                         </div> <!-- wrapper -->
 
@@ -413,11 +438,12 @@
                             <div class="col s3 center-align">
                                 <a id="btnPrev5" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
                             </div>
-                            <div class="col s6 center-align">
-                                    <a id="btnSerialize" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">code</i></a>
-                                </div>
+                            <!-- Button to check serialize() in console -->
+                            <!-- <div class="col s6 center-align">
+                                <a id="btnSerialize" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">code</i></a>
+                            </div> -->
                             <div class="col s3 center-align">
-                                <button type="submit" id="btnSubmit" name="final" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i>
+                                <a id="btnSubmit" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
                             </div>
                         </div>
 
@@ -437,16 +463,17 @@
         <!-- Import Materialize JS -->
         <script src="assets/js/bin/materialize.js"></script>
 
-        <!-- Import Google Maps API Key -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlQKNWPRGayhjugyJhyMqCVKTI9MRg4uk&libraries=places&callback=initAutocomplete" async defer></script>
-
         <!-- Import Slick JS -->
         <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <!-- Import custom script -->
         <script src="js/script.js"></script>
 
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!-- Import Google Maps API -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlQKNWPRGayhjugyJhyMqCVKTI9MRg4uk&libraries=places&callback=initAutocomplete" async defer></script>
+
+        <!-- Import reCAPTCHA API -->
+        <script src="https://www.google.com/recaptcha/api.js?" async defer></script>
 
         
     </body>
