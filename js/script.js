@@ -50,6 +50,7 @@ $(document).ready(function(){
         if($('#otherA').is(":checked") && !$.trim($("#txtareaA").val())) {
             $('#txtareaA').addClass('txtarea_error');
             $('#txtareaALabel').addClass('txtarea_label_error');
+            M.toast({html: 'Please input field', displayLength: '1000', classes: 'rounded'});
             $('#txtareaA').focus(function() {
                 $('#txtareaA').removeClass('txtarea_error'),
                 $('#txtareaALabel').removeClass('txtarea_label_error');
@@ -84,6 +85,7 @@ $(document).ready(function(){
         if($('#otherB').is(":checked") && !$.trim($("#txtareaB").val())) {
             $('#txtareaB').addClass('txtarea_error');
             $('#txtareaBLabel').addClass('txtarea_label_error');
+            M.toast({html: 'Please input field', displayLength: '1000', classes: 'rounded'});
             $('#txtareaB').focus(function() {
                 $('#txtareaB').removeClass('txtarea_error'),
                 $('#txtareaBLabel').removeClass('txtarea_label_error');
@@ -118,6 +120,7 @@ $(document).ready(function(){
         if(!$.trim($("#textarea_working_on").val())) {
             $('#textarea_working_on').addClass('txtarea_error');
             $('#textarea_working_on_label').addClass('txtarea_label_error');
+            M.toast({html: 'Please input field', displayLength: '1000', classes: 'rounded'});
             $('#textarea_working_on').focus(function() {
                 $('#textarea_working_on').removeClass('txtarea_error'),
                 $('#textarea_working_on_label').removeClass('txtarea_label_error');
@@ -139,6 +142,7 @@ $(document).ready(function(){
         // Check if textarea is empty
         if(!$.trim($("#textarea_address").val())) {
             $("#textarea_address").addClass('address_error');
+            M.toast({html: 'Please input address', displayLength: '1000', classes: 'rounded'});
             $('#textarea_address').focus(function() {
                 $('#textarea_address').removeClass('address_error');
             });
@@ -169,6 +173,7 @@ $(document).ready(function(){
     if(!$.trim($("#name").val())) {
         $("#name").addClass('txtarea_error');
         $("#name_label").addClass('txtarea_label_error');
+        M.toast({html: 'Please input name', displayLength: '1000', classes: 'rounded'});
         flag = false;
         $("#name").focus(function() {
             $('#name').removeClass('txtarea_error');
@@ -180,6 +185,7 @@ $(document).ready(function(){
     if(!$.trim($("#telephone").val())) {
         $("#telephone").addClass('txtarea_error');
         $("#telephone_label").addClass('txtarea_label_error');
+        M.toast({html: 'Please input telephone', displayLength: '1000', classes: 'rounded'});
         flag = false;
         $("#telephone").focus(function() {
             $('#telephone').removeClass('txtarea_error');
@@ -219,10 +225,13 @@ $(document).ready(function(){
             data: $('#myForm').serialize(),
             
             success: function (data) {
-                if(data == 'success')
-                    alert("Your e-mail has been sent"); // ToDo: redirect somewhere nice
+                // Redirect to final page
+                if(data == 'success') {
+                    $('.my_slider').slick('slickNext');
+                }
+
                 else
-                    M.toast({html: "For some reason, data was not fetched!", displayLength: '3000', classes: 'rounded'});
+                    M.toast({html: "It seems you did not provide us all information.\nPlease, check form once again!", displayLength: '3000', classes: 'rounded'});
             },
             
             error: function(x,e) {
