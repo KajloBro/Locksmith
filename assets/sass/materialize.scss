@@ -78,6 +78,15 @@
     font-size: 2em !important;
 }
 
+.button_width {
+    width: 100% !important;
+    margin: 10px 0 !important;
+}
+
+input [type=button]:active {
+    border: 0px !important;
+}
+
 #txtareaDivA {
     display: none;
 }
