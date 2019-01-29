@@ -100,7 +100,7 @@
                 </div> <!-- slide -->
 
 
-                <!-- Slide 5 (Submit) -->
+                <!-- Slide 2 (Personal Info) -->
                 <div class="slide2" id="slide-2">
                     <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
                         <div id="buffer" class="determinate" style="width: 21%"></div>
@@ -150,6 +150,774 @@
                             </div>
                         </div>
                     
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 3 (Company Info) -->
+                <div class="slide3" id="slide-3">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div id="buffer" class="determinate" style="width: 28%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>COMPANY INFO</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="input-field col l4 m12">
+                                    <i class="material-icons prefix">business</i>
+                                        <input id="company" type="text" name="company">
+                                    <label id="company_label" for="company">Company</label>
+                                    <small id="company" style="padding-left: 45px;">If applicable</small>
+                                </div>
+                                <div class="input-field col l4 m12">
+                                    <i class="material-icons prefix">work</i>
+                                        <input id="position" type="text" name="position">
+                                    <label id="position_label" for="position">Position</label>
+                                    <small id="position" style="padding-left: 45px;">If applicable</small>
+                                </div>
+                                <div class="input-field col l4 m12">
+                                    <i class="material-icons prefix">public</i>
+                                        <input id="web" type="text" name="web">
+                                    <label id="web_label" for="web">Web site</label>
+                                    <small id="web" style="padding-left: 45px;">If applicable</small>
+                                </div>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                        <!-- Navigation -->
+                        <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev3" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext3" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+                    
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 4 (Address) -->
+                <div class="slide4" id="slide-4">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 35%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>WHERE ARE YOU LOCATED?</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="input-field col s11 center-align">
+                                    <input type="text" id="textarea_address" name="address"/>
+                                    <small id="textarea_address">Write your address manually if not found</small>
+                                </div>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev4" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext4" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 5 (XP Years) -->
+                <div class="slide5" id="slide-5">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 42%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>HOW MANY YEARS HAVE YOU BEEN A LOCKSMITH?</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <p class="range-field center-align">
+                                    <input type="range" id="years_of_xp" min="0" max="20" value="0" name="xp_years" />
+                                    <small id="years_of_xp_small">0</small>
+                                </p>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev5" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext5" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 6 (Judicial disclosure) -->
+                <div class="slide6" id="slide-6">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 49%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>JUDICIAL DISCLOSURE</h2>
+                            </div>
+                            
+                            <!-- Question 1 -->
+                            <div class="row" id="crime_checboxes">
+                                <div class="col s8">
+                                    <span>Have you ever been convicted of a crime?</span>
+                                </div>
+                                <div class="col offset-s1">
+                                    <span class="switch">
+                                        <label>
+                                            No
+                                            <input type="checkbox" name="crimeQ1">
+                                            <span class="lever"></span>
+                                            Yes
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="row" id="crime_checboxes">
+                                <div class="col s8">
+                                    <span>Are you currently under any type of criminal investigation?</span>
+                                </div>
+                                <div class="col offset-s1">
+                                    <span class="switch">
+                                        <label>
+                                            No
+                                            <input type="checkbox" name="crimeQ2" >
+                                            <span class="lever"></span>
+                                            Yes
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Question 1 -->
+                            <div class="row" id="crime_checboxes">
+                                <div class="col s8">
+                                    <span>Are you currently involved in any pending civil lawsuits?</span>
+                                </div>
+                                <div class="col offset-s1">
+                                    <span class="switch">
+                                        <label>
+                                            No
+                                            <input type="checkbox" name="crimeQ3" >
+                                            <span class="lever"></span>
+                                            Yes
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class="row" id="crime_checboxes">
+                                <div class="col s8">
+                                    <span>Are you subject to any civil judgments?</span>
+                                </div>
+                                <div class="col offset-s1">
+                                    <span class="switch">
+                                        <label>
+                                            No
+                                            <input type="checkbox" name="crimeQ4" >
+                                            <span class="lever"></span>
+                                            Yes
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Explanation -->
+                            <div class="col s12">
+                                <div id="txtareaDivCrimial">
+                                    <div class="input-field">
+                                        <textarea id="txtareaCrime" class="materialize-textarea" name="crime_explain"></textarea>
+                                        <label id="txtareaCrimeLabel" for="txtareaCrime">Please explain ...</label>
+                                    </div>
+                                </div>     
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev6" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext6" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+    
+
+                <!-- Slide 7 (Relocation) -->
+                <div class="slide7" id="slide-7">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 56%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>RELOCATION</h2>
+                            </div>
+                            <div class="row mb-5">
+                                    <div class="row" id="crime_checboxes">
+                                        <div class="col s8">
+                                            <span>Are you willing to relocate?</span>
+                                        </div>
+                                        <div class="col offset-s1">
+                                            <span class="switch">
+                                                <label>
+                                                    No
+                                                    <input type="checkbox" name="relocate">
+                                                    <span class="lever"></span>
+                                                    Yes
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev7" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext7" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 8 (Availability) -->
+                <div class="slide8" id="slide-8">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 63%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>WHAT IS YOUR DAY TO DAY AVAILABILITY LIKE</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="input-field col s11 center-align">
+                                    <textarea id="textarea_availability" class="materialize-textarea" name="availability"></textarea>
+                                    <label id="textarea_availability_label" for="textarea_availability">Please explain ...</label>
+                                </div>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev8" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext8" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+    
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 9 (Home/Bussines Experience) -->
+                <div class="slide9" id="slide-9">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 70%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>HOME / BUSINESS LOCKSMITH EXPERIENCE</h2>
+                            </div>
+                            <div class="row left-align" id="home_checkboxes">
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Home/BusinessLockout" name="hbxp[]" />
+                                            <span> Home / Business Lockout</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LockRepair/Replace/Instal" name="hbxp[]"/>
+                                            <span>Lock Repair / Replace / Instal</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LockRekey" name="hbxp[]"/>
+                                            <span>Lock Rekey</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="CCTV" name="hbxp[]"/>
+                                            <span>CCTV</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Mailbox" name="hbxp[]"/>
+                                            <span>Mailbox</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Safe/Vault" name="hbxp[]"/>
+                                            <span>Safe / Vault</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="FileCabinet/Desk" name="hbxp[]"/>
+                                            <span>File Cabinet / Desk</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="CommercialExitDevice" name="hbxp[]"/>
+                                            <span>Commercial Exit Device</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="KeyDuplication" name="hbxp[]"/>
+                                            <span>Key Duplication</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                        
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="DoorViewer/Peephole" name="hbxp[]"/>
+                                            <span>Door Viewer / Peephole</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="DoorViewer/Peephole" name="hbxp[]"/>
+                                            <span>No experience</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Other" id="otherA" name="hbxp[]"/>
+                                            <span>Other, Please explain</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                    
+                            </div>
+
+                            <div class="col s12">
+                                <div id="txtareaDivA">
+                                    <div class="input-field">
+                                        <textarea id="txtareaA" class="materialize-textarea" name="other1"></textarea>
+                                        <label id="txtareaALabel" for="txtareaA">Please explain ...</label>
+                                    </div>
+                                </div>     
+                            </div>
+                        
+                        </div> <!-- wrapper -->
+
+                        <!-- Navigation -->
+                        <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev9" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext9" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 10 (Automotive Experience) -->
+                <div class="slide10" id="slide-10">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 77%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>AUTOMOTIVE LOCKSMITH EXPERIENCE</h2>
+                            </div>
+                            <div class="row left-align" id="automotive_checkboxes">
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Lockout" name="amxp[]"/>
+                                            <span>Lockout</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="CarKey/replacement" name="amxp[]"/>
+                                            <span>Car Key Replacement</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="IgnitionLockRepair/Replace" name="amxp[]"/>
+                                            <span>Ignition Lock Repair / Replace</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="DoorLockRepair/Replace" name="amxp[]"/>
+                                            <span>Door Lock Repair / Replace</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Remote" name="amxp[]"/>
+                                            <span>Remote</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Key/RemoteProgramming" name="amxp[]"/>
+                                            <span>Key / Remote Programming</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Motorcycle/ATV/BoatKeys" name="amxp[]"/>
+                                            <span>Motorcycle / ATV / Boat Keys</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="BrokenKeyExtraction" name="amxp[]"/>
+                                            <span>Broken Key Extraction</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="BrokenKeyExtraction" name="amxp[]"/>
+                                            <span>No experience</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Other" id="otherB" name="amxp[]"/>
+                                            <span>Other, Please explain</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                    
+                            </div>
+
+                            <div class="col s12">
+                                <div id="txtareaDivB">
+                                    <div class="input-field">
+                                        <textarea id="txtareaB" class="materialize-textarea" name="other2"></textarea>
+                                        <label id="txtareaBLabel" for="txtareaB">Please explain ...</label>
+                                    </div>
+                                </div>     
+                            </div>
+                        
+                        </div> <!-- wrapper -->
+
+                        <!-- Navigation -->
+                        <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev10" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext10" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 11 (Automotive Experience) -->
+                <div class="slide11" id="slide-11">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div class="determinate" style="width: 84%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>WHAT TYPE OF SERVICES MAY BE OF AN INTEREST TO YOU?</h2>
+                            </div>
+                            <div class="row left-align" id="interests_checkboxes">
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="WebsiteDevelopment" name="interests[]"/>
+                                            <span>Website Development</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Call-CenterAnsweringService" name="interests[]"/>
+                                            <span>Call-Center Answering Service</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LocksmithMarketing" name="interests[]"/>
+                                            <span>Locksmith Marketing</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LocksmithEduacationTraining" name="interests[]"/>
+                                            <span>Locksmith Eduacation &amp Training</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LocksmithEquipmentSupplies" name="interests[]"/>
+                                            <span>Locksmith Equipment &amp Supplies</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LocksmithAffilation" name="interests[]"/>
+                                            <span>Locksmith Affilation</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="LocksmithFinancialServices" name="interests[]"/>
+                                            <span>Locksmith Financial Services</span>
+                                        </label>
+                                    </span>
+                                </div>
+
+                                <div class="col s6 l4">
+                                    <span>
+                                        <label>
+                                            <input type="checkbox" value="Other" id="otherC" name="interests[]"/>
+                                            <span>Other, Please explain</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                    
+                            </div>
+
+                            <div class="col s12">
+                                <div id="txtareaDivC">
+                                    <div class="input-field">
+                                        <textarea id="txtareaC" class="materialize-textarea" name="other3"></textarea>
+                                        <label id="txtareaCLabel" for="txtareaC">Please explain ...</label>
+                                    </div>
+                                </div>     
+                            </div>
+                        
+                        </div> <!-- wrapper -->
+
+                        <!-- Navigation -->
+                        <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev11" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <div class="col offset-s6 s3 center-align">
+                                <a id="btnNext11" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 12 (Biography) -->
+                <div class="slide12" id="slide-12">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div id="buffer1" class="determinate" style="width: 91%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>TELL US A BIT ABOUT YOURSELF</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s11 center-align">
+                                            <textarea id="textarea_bio" class="materialize-textarea" name="bio"></textarea>
+                                            <label id="textarea_bio_label" for="textarea_bio">Please explain ...</label>
+                                            <small id="textarea_bio_small">Your background, hobbies, how you entered the Locksmith industry or what made you want become a Locksmith. Perhaps a funny or an unusual experience with a customer ...</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-m4 m4 s12">
+                                    <div class="g-recaptcha" data-sitekey="6LcpzYwUAAAAABf8gU0pg1TWDkXODCXw6tZ4exSm"></div>
+                                </div>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                    <!-- Navigation -->
+                    <div class="row">
+                            <div class="col s3 center-align">
+                                <a id="btnPrev12" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_before</i></a>
+                            </div>
+                            <!-- <div class="col s6 center-align">
+                                <a id="btnSerial" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">code</i></a>
+                            </div> -->
+                            <div class="col s3 center-align">
+                                <a id="btnSubmit" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">navigate_next</i></a>
+                            </div>
+                        </div>
+    
+                    </div> <!-- container -->
+                </div> <!-- slide -->
+
+
+                <!-- Slide 13 (Redirect) -->
+                <div class="slide13" id="slide-13">
+                    <div class="progress" style="margin: 0 !important; padding-bottom: 3px">
+                        <div id="buffer" class="determinate" style="width: 100%"></div>
+                    </div>
+                    <div class="container">
+                        <div class="custom_wrapper">
+                            <div class="row center-align mb-5">
+                                <h2>ALL DONE!</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <h4>
+                                    <div class="card teal lighten-1">
+                                        <div class="card-content white-text">
+                                            <p>
+                                                Success!
+                                                You Are 1 Step Further in Advancing Your Career!
+                                                Please allow a few days for our team to review and
+                                                contact you by phone and/or email. We look forward to
+                                                having you part of our
+                                                Locksmith Network Family.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </h4>
+                            </div>
+
+                        </div> <!-- wrapper -->
+
+                        <!-- Navigation -->
+                        <div class="row">
+                            <div class="col offset-s4 s4 center-align">
+                                <a id="btnHome" href="register.html" class="waves-effect waves-light btn-large btn-floating"><i class="material-icons">home</i></a>
+                            </div>
+                        </div>
+
                     </div> <!-- container -->
                 </div> <!-- slide -->
     

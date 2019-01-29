@@ -8095,13 +8095,10 @@ input[type=range]::-ms-thumb {
 .mb-5 {
   margin-bottom: 5em;
 }
-
-.mb-4 {
-  margin-bottom: 4em;
-}
-
-.hide_me {
-  display: none;
+@media only screen and (max-width : 600px) {
+  .mb-5 {
+    margin-bottom: 1em;
+  }
 }
 
 .custom_wrapper {
@@ -8126,6 +8123,14 @@ input [type=button]:active {
 }
 
 #txtareaDivB {
+  display: none;
+}
+
+#txtareaDivC {
+  display: none;
+}
+
+#txtareaDivCrimial {
   display: none;
 }
 

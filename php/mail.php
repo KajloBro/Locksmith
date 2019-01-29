@@ -20,51 +20,84 @@
         $responseKeys = json_decode($response,true);
         
         if(intval($responseKeys["success"]) !== 1) {
-            echo 'You have been rejected from reCAPTCHA. Try again later.';
+            echo 'You have been rejected by reCAPTCHA. Try again later.';
             exit;
         } 
     }
     
-    //     Prepare data
 
-    if(isset($_POST['locksmith_for'])) $locksmith_for = $_POST['locksmith_for'];
-    else $locksmith_for = "";
 
-    if(isset($_POST['other1'])) $other = $_POST['other1'];
-    else $other1 = "";
+    // This will execute if query_form is submitted
+    if (isset($_POST['locksmith_for'])) {
 
-    if(isset($_POST['other2'])) $other = $_POST['other2'];
-    else $other2 = "";
+        //     Prepare data
 
-    if(isset($_POST['object'])) $object = $_POST['object'];
-    else $object = "";
+        if(isset($_POST['locksmith_for'])) $locksmith_for = $_POST['locksmith_for'];
+        else $locksmith_for = "";
 
-    if(isset($_POST['address'])) $address = $_POST['address'];
-    else $address = "";
+        if(isset($_POST['other1'])) $other = $_POST['other1'];
+        else $other1 = "";
 
-    if(isset($_POST['name'])) $name = $_POST['name'];
-    else $name = "";
+        if(isset($_POST['other2'])) $other = $_POST['other2'];
+        else $other2 = "";
 
-    if(isset($_POST['telephone'])) $telephone = $_POST['telephone'];
-    else $telephone = "";
+        if(isset($_POST['object'])) $object = $_POST['object'];
+        else $object = "";
 
-    if(isset($_POST['email'])) $email = $_POST['email'];
-    else $email = "";
+        if(isset($_POST['address'])) $address = $_POST['address'];
+        else $address = "";
 
-    $services = array();
-    if(isset($_POST['services'])) {
-        if(!empty($_POST['services'])){
-            foreach($_POST['services'] as $selected){
-                $services[] = $selected;
+        if(isset($_POST['name'])) $name = $_POST['name'];
+        else $name = "";
+
+        if(isset($_POST['telephone'])) $telephone = $_POST['telephone'];
+        else $telephone = "";
+
+        if(isset($_POST['email'])) $email = $_POST['email'];
+        else $email = "";
+
+        $services = array();
+        if(isset($_POST['services'])) {
+            if(!empty($_POST['services'])){
+                foreach($_POST['services'] as $selected){
+                    $services[] = $selected;
+                }
             }
         }
+
+
+        // dummy condition for ajax response testing
+        if ($locksmith_for != "") 
+            echo "success";
+        else
+            echo "it really doesnt matter";
+
+
     }
 
 
-    // dummy condition for ajax response testing
-    if ($locksmith_for != "") 
-        echo "success";
-    else
-        echo "it really doesnt matter";
+
+    // This will execute if register form is submitted
+    else if (isset($_POST['level'])) {
+
+        // Prepare data
+
+        // ToDo: fetch $_POST
+        $level = $_POST['level'];
+
+
+
+        // dummy condition for ajax response testing
+        if ($level != "") 
+            echo "success";
+        else
+            echo "it really doesnt matter";
+
+
+    }
+
+    else {
+        echo "nothing";
+    }
 
 ?>

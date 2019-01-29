@@ -50,14 +50,10 @@
 
 .mb-5 {
     margin-bottom: 5em;
-}
+    @media #{$small-and-down} {
+        margin-bottom: 1em;
+      }
 
-.mb-4 {
-    margin-bottom: 4em;
-}
-
-.hide_me {
-    display: none;
 }
 
 
@@ -92,6 +88,14 @@ input [type=button]:active {
 }
 
 #txtareaDivB {
+    display: none;
+}
+
+#txtareaDivC {
+    display: none;
+}
+
+#txtareaDivCrimial {
     display: none;
 }
 
